@@ -21,11 +21,20 @@
 
     {{> navigation }}
 
-    <main class="container p-4">
-        {{> messages }}
-        {{> errors}}
-        {{{ body }}}
-    </main>
+
+    <div class="p-4">
+        <div class="row">
+            <div class="col-md-4">
+                {{> messages }}
+                {{> errors }}
+                {{{ body }}}
+            </div>
+            <div class="col-md-8">
+                {{> protocolo }}
+            </div>
+        </div>
+    </div>  
+
 
     <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -37,6 +46,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    {{!-- <script src="handlebars/dist/handlebars.min.js"></script>
+    <script src="handlebars-intl/dist/handlebars-intl.min.js"></script> --}}
 </body>
 
 </html>
