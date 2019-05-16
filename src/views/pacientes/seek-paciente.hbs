@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-5">
+        <div class="card">
+            <div class="card header">
+                <h3>Ingresar Paciente a Buscar</h3>
+            </div>
+            <div class="card-body">
+                <form action="/paciente/seek" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="DNI" class="form-control" placeholder="DNI" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">
+                            Buscar
+                        </button>
+                    </div>
+                </form>                
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        {{#if pacientes}}
+            <table class="table table-striped table-hover table-bordered table-sm bg-white">
+                <thead>
+                <tr>
+                    <td>DNI</td>
+                    <td>Nombre</td>
+                    <td>Acciones</td>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each pacientes}}
+                <tr>
+                    <td>{{Paciente.DNI}}</td>
+                    <td>{{Paciente.Nombre}}</td>
+                    <td>
+                    <a href="#" class="btn btn-secondary">Ver</a>
+                    </td>
+                </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        {{else}}
+            <div class="card mx-auto">
+                <div class="card-body">
+                    <h3 class="px-auto" >SIN PACIENTE</h3>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</div>
