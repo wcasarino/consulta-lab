@@ -3,6 +3,23 @@
         <h5>Protocolo</h5>
     </div>
     <div class="card-body">
-        {{protocolo}}
+        {{#if protocolo}}
+            <h4>Hemograma</h4>
+            <h5>Eritrocitos: </h5> <p>{{protocolo.Hemograma.Eritrocitos}}</p>
+            <h5>Hemoglobina: </h5> <p>{{protocolo.Hemograma.Hemoglobina}}</p>
+            <h5>Hematocritos: </h5> <p>{{protocolo.Hemograma.Hematocritos}}</p>
+            <h5>Leucocitos: </h5> <p>{{protocolo.Hemograma.Leucocitos}}</p>
+            <h5>Plaquetas: </h5> <p>{{protocolo.Hemograma.Plaquetas}}</p>
+            <h5>Eritrosedimentacion: </h5> <p>{{protocolo.Hemograma.Eritrosedimentacion}}</p>
+
+                        <h4>Hemograma</h4>
+            <h5>Eritrocitos: </h5> <p>{{protocolo.Hemograma.Eritrocitos}}</p>
+            <h5>Hemoglobina: </h5> <p>{{protocolo.Hemograma.Hemoglobina}}</p>
+            <h5>Hematocritos: </h5> <p>{{protocolo.Hemograma.Hematocritos}}</p>
+            <h5>Leucocitos: </h5> <p>{{protocolo.Hemograma.Leucocitos}}</p>
+            <h5>Plaquetas: </h5> <p>{{protocolo.Hemograma.Plaquetas}}</p>
+            <h5>Eritrosedimentacion: </h5> <p>{{protocolo.Hemograma.Eritrosedimentacion}}</p>
+            
+        {{/if}}
     </div>
 </div>
