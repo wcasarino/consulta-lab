@@ -26,7 +26,7 @@ router.post('/paciente/seek', isAuthenticated, async (req, res) => {
         .limit(15)
         .sort({ Fecha: -1 });
         viewModel.pacientes = pacientes;
-        //console.log(viewModel);
+        console.log(pacientes);
         res.render('pacientes/seek-paciente', viewModel );
     }
 });

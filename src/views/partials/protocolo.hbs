@@ -3,23 +3,77 @@
         <h5>Protocolo</h5>
     </div>
     <div class="card-body">
-        {{#if protocolo}}
-            <h4>Hemograma</h4>
-            <h5>Eritrocitos: </h5> <p>{{protocolo.Hemograma.Eritrocitos}}</p>
-            <h5>Hemoglobina: </h5> <p>{{protocolo.Hemograma.Hemoglobina}}</p>
-            <h5>Hematocritos: </h5> <p>{{protocolo.Hemograma.Hematocritos}}</p>
-            <h5>Leucocitos: </h5> <p>{{protocolo.Hemograma.Leucocitos}}</p>
-            <h5>Plaquetas: </h5> <p>{{protocolo.Hemograma.Plaquetas}}</p>
-            <h5>Eritrosedimentacion: </h5> <p>{{protocolo.Hemograma.Eritrosedimentacion}}</p>
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th>Paciente</th>
+                <th>Hemograma</th>
+                <th>Formula Leucocitaria</th>
+                <th>Orina</th>
+                <th>Examen Microscopico de Sedimento</th>
+                <th>Sedimento urinario</th>
+                <th>Antibiograma</th>
+                <th>Analisis quimico</th>
+                <th>Enzimas</th>
+                <th>Bilirrubina</th>
+                <th>Coagulacion</th>
+                <th>PRUEBA DE TOLERANCIA ORAL A LA GLUCOSA</th>
+                <th>Grupo Sanguineo</th>
+                <th>Factor RH</th>
+                <th>Serologia</th>
+                <th>HCG EN SANGRE</th>
+                <th>PSA (prostatico)</th>
+                <th>POLIMORFOS NUCLEARES EN MATERIA FECAL</th>
+                <th>COPROPARASITOLOGICO SERIADO</th>
+                <th>ESCOBILLADO ANAL</th>
+                <th>PROTEINURIA (24 hs)</th>
+                <th>EXUDADO VAGINAL - ANAL</th>
+                <th>HbA1c (hemoglobina glicosilada)</th>
+                <th>TIROIDE (TSH)</th>
+                <th>TIROIDE (T4)</th>
+                <th>STROUT</th>
+                <th>IGA -TGG (celiuaquia)</th>
+                <th>SOMF (sangre oculta en materia fecal)</th>
+                <th>IONOGRAMA</th>
+            </tr>
+            </thead>
 
-                        <h4>Hemograma</h4>
-            <h5>Eritrocitos: </h5> <p>{{protocolo.Hemograma.Eritrocitos}}</p>
-            <h5>Hemoglobina: </h5> <p>{{protocolo.Hemograma.Hemoglobina}}</p>
-            <h5>Hematocritos: </h5> <p>{{protocolo.Hemograma.Hematocritos}}</p>
-            <h5>Leucocitos: </h5> <p>{{protocolo.Hemograma.Leucocitos}}</p>
-            <h5>Plaquetas: </h5> <p>{{protocolo.Hemograma.Plaquetas}}</p>
-            <h5>Eritrosedimentacion: </h5> <p>{{protocolo.Hemograma.Eritrosedimentacion}}</p>
-            
-        {{/if}}
+            <tbody>
+
+                {{#each protocolo}}
+                <tr>
+                    <th>{{Paciente}}</th>
+                    <th>{{Hemograma}}</th>
+                    <th>{{'Formula Leucocitaria'}}</th>
+                    <th>{{Orina}}</th>
+                    <th>{{'Examen Microscopico de Sedimento'}}</th>
+                    <th>{{'Sedimento urinario'}}</th>
+                    <th>{{Antibiograma}}</th>
+                    <th>{{'Analisis quimico'}}</th>
+                    <th>{{Enzimas}}</th>
+                    <th>{{Bilirrubina}}</th>
+                    <th>{{Coagulacion}}</th>
+                    <th>{{'PRUEBA DE TOLERANCIA ORAL A LA GLUCOSA'}}</th>
+                    <th>{{'Grupo Sanguineo'}}</th>
+                    <th>{{'Factor RH'}}</th>
+                    <th>{{Serologia}}</th>
+                    <th>{{'HCG EN SANGRE'}}</th>
+                    <th>{{'PSA (prostatico)'}}</th>
+                    <th>{{'POLIMORFOS NUCLEARES EN MATERIA FECAL'}}</th>
+                    <th>{{'COPROPARASITOLOGICO SERIADO'}}</th>
+                    <th>{{'ESCOBILLADO ANAL'}}</th>
+                    <th>{{'PROTEINURIA (24 hs)'}}</th>
+                    <th>{{'EXUDADO VAGINAL - ANAL'}}</th>
+                    <th>{{'HbA1c (hemoglobina glicosilada)'}}</th>
+                    <th>{{'TIROIDE (TSH)'}}</th>
+                    <th>{{'TIROIDE (T4)'}}</th>
+                    <th>{{STROUT}}</th>
+                    <th>{{'IGA -TGG (celiuaquia)'}}</th>
+                    <th>{{'SOMF (sangre oculta en materia fecal)'}}</th>
+                    <th>{{IONOGRAMA}}</th>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
     </div>
 </div>
