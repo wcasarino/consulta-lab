@@ -8,5 +8,9 @@ body {
 }
 
 .size{
-    width: 100%;
+    width: 230px;
   }
+
+.sizeFecha{
+    width: 90px;
+}

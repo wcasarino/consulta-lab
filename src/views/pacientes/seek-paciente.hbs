@@ -26,81 +26,22 @@
             > 
                 <thead>
                 <tr>
-                    <td>Fecha</td>
+                    <td><div class="sizeFecha">Fecha </div></td>
                     <td>Protocolo</td>
                     <td>DNI</td>
                     <td>Nombre</td>
-                    <th><div class="size">Hemograma</div></th>
-                    <th>Formula Leucocitaria</th>
-                    <th>Orina</th>
-                    <th>Examen Microscopico de Sedimento</th>
-                    <th>Sedimento urinario</th>
-                    <th>Antibiograma</th>
-                    <th>Analisis quimico</th>
-                    <th>Enzimas</th>
-                    <th>Bilirrubina</th>
-                    <th>Coagulacion</th>
-                    <th>PRUEBA DE TOLERANCIA ORAL A LA GLUCOSA</th>
-                    <th>Grupo Sanguineo</th>
-                    <th>Factor RH</th>
-                    <th>Serologia</th>
-                    <th>HCG EN SANGRE</th>
-                    <th>PSA (prostatico)</th>
-                    <th>POLIMORFOS NUCLEARES EN MATERIA FECAL</th>
-                    <th>COPROPARASITOLOGICO SERIADO</th>
-                    <th>ESCOBILLADO ANAL</th>
-                    <th>PROTEINURIA (24 hs)</th>
-                    <th>EXUDADO VAGINAL - ANAL</th>
-                    <th>HbA1c (hemoglobina glicosilada)</th>
-                    <th>TIROIDE (TSH)</th>
-                    <th>TIROIDE (T4)</th>
-                    <th>STROUT</th>
-                    <th>IGA -TGG (celiuaquia)</th>
-                    <th>SOMF (sangre oculta en materia fecal)</th>
-                    <th>IONOGRAMA</th>
-
-                    {{!-- <td>Acciones</td> --}}
+                    <td>Acciones</td>
 
                 </tr>
                 </thead>
                 <tbody >
                     {{#each pacientes}}
                     <tr>
-                        {{!-- <td>{{formatDate Fecha day="numeric" month="long" year="numeric"}}</td> --}}
                         <td>{{formatFecha Fecha}}</td>
                         <td>{{Protocolo}}</td>
                         <td>{{Paciente.DNI}}</td>
                         <td>{{Paciente.Nombre}}</td>
-                        <th>{{Hemograma}}</th>
-                        <th style="width:500px">{{'Formula Leucocitaria'}}</th>
-                        <th>{{Orina}}</th>
-                        <th>{{'Examen Microscopico de Sedimento'}}</th>
-                        <th>{{'Sedimento urinario'}}</th>
-                        <th>{{Antibiograma}}</th>
-                        <th>{{'Analisis quimico'}}</th>
-                        <th>{{Enzimas}}</th>
-                        <th>{{Bilirrubina}}</th>
-                        <th>{{Coagulacion}}</th>
-                        <th>{{'PRUEBA DE TOLERANCIA ORAL A LA GLUCOSA'}}</th>
-                        <th>{{'Grupo Sanguineo'}}</th>
-                        <th>{{'Factor RH'}}</th>
-                        <th>{{Serologia}}</th>
-                        <th>{{'HCG EN SANGRE'}}</th>
-                        <th>{{'PSA (prostatico)'}}</th>
-                        <th>{{'POLIMORFOS NUCLEARES EN MATERIA FECAL'}}</th>
-                        <th>{{'COPROPARASITOLOGICO SERIADO'}}</th>
-                        <th>{{'ESCOBILLADO ANAL'}}</th>
-                        <th>{{'PROTEINURIA (24 hs)'}}</th>
-                        <th>{{'EXUDADO VAGINAL - ANAL'}}</th>
-                        <th>{{'HbA1c (hemoglobina glicosilada)'}}</th>
-                        <th>{{'TIROIDE (TSH)'}}</th>
-                        <th>{{'TIROIDE (T4)'}}</th>
-                        <th>{{STROUT}}</th>
-                        <th>{{'IGA -TGG (celiuaquia)'}}</th>
-                        <th>{{'SOMF (sangre oculta en materia fecal)'}}</th>
-                        <th>{{IONOGRAMA}}</th>
-
-                        {{!-- <td>
+                        <td>
                             <form action="/protocolo/seek/{{_id}}" method="POST">
                                 <div class="form-group">
                                     <button class="btn btn-primary btn-block" type="submit">
@@ -108,7 +49,7 @@
                                     </button>
                                 </div>
                             </form>
-                        </td> --}}
+                        </td>
                     </tr>
                     {{/each}}
                 </tbody>

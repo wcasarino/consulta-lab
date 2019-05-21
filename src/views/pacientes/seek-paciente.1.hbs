@@ -1,0 +1,125 @@
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card header">
+                <h3>Ingresar Paciente a Buscar</h3>
+            </div>
+            <div class="card-body">
+                <form action="/paciente/seek" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="DNI" class="form-control" placeholder="DNI" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">
+                            Buscar
+                        </button>
+                    </div>
+                </form>                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 p-4 table-responsive" >
+        {{#if pacientes}}
+            <table class="table table-striped table-hover table-bordered table-sm bg-white table-responsive" 
+            > 
+                <thead>
+                <tr>
+                    <td><div class="sizeFecha">Fecha </div></td>
+                    <td>Protocolo</td>
+                    <td>DNI</td>
+                    <td>Nombre</td>
+                    <th><div class="size">Hemograma</div></th>
+                    <th><div class="size">Formula Leucocitaria</div></th>
+                    <th><div class="size">Orina</div></th>
+                    <th><div class="size">Examen Microscopico de Sedimento</div></th>
+                    <th><div class="size">Sedimento urinario</div></th>
+                    <th><div class="size">Antibiograma</div></th>
+                    <th><div class="size">Analisis quimico</div></th>
+                    <th><div class="size">Enzimas</div></th>
+                    <th><div class="size">Bilirrubina</div></th>
+                    <th><div class="size">Coagulacion</div></th>
+                    <th><div class="size">PRUEBA DE TOLERANCIA ORAL A LA GLUCOSA</div></th>
+                    <th><div class="size">Grupo Sanguineo</div></th>
+                    <th><div class="size">Factor RH</div></th>
+                    <th><div class="size">Serologia</div></th>
+                    <th><div class="size">HCG EN SANGRE</div></th>
+                    <th><div class="size">PSA (prostatico)</div></th>
+                    <th><div class="size">POLIMORFOS NUCLEARES EN MATERIA FECAL</div></th>
+                    <th><div class="size">COPROPARASITOLOGICO SERIADO</div></th>
+                    <th><div class="size">ESCOBILLADO ANAL</div></th>
+                    <th><div class="size">PROTEINURIA (24 hs)</div></th>
+                    <th><div class="size">EXUDADO VAGINAL - ANAL</div></th>
+                    <th><div class="size">HbA1c (hemoglobina glicosilada)</div></th>
+                    <th><div class="size">TIROIDE (TSH)</div></th>
+                    <th><div class="size">TIROIDE (T4)</div></th>
+                    <th><div class="size">STROUT</div></th>
+                    <th><div class="size">IGA -TGG (celiuaquia)</div></th>
+                    <th><div class="size">SOMF (sangre oculta en materia fecal)</div></th>
+                    <th><div class="size">IONOGRAMA</div></th>
+
+                    {{!-- <td>Acciones</td> --}}
+
+                </tr>
+                </thead>
+                <tbody >
+                    {{#each pacientes}}
+                    <tr>
+                        {{!-- <td>{{formatDate Fecha day="numeric" month="long" year="numeric"}}</td> --}}
+                        <td>{{formatFecha Fecha}}</td>
+                        <td>{{Protocolo}}</td>
+                        <td>{{Paciente.DNI}}</td>
+                        <td>{{Paciente.Nombre}}</td>
+                        <th>{{Hemograma}}</th>
+                        <th style="width:500px">{{'Formula Leucocitaria'}}</th>
+                        <th>{{Orina}}</th>
+                        <th>{{'Examen Microscopico de Sedimento'}}</th>
+                        <th>{{'Sedimento urinario'}}</th>
+                        <th>{{Antibiograma}}</th>
+                        <th>{{'Analisis quimico'}}</th>
+                        <th>{{Enzimas}}</th>
+                        <th>{{Bilirrubina}}</th>
+                        <th>{{Coagulacion}}</th>
+                        <th>{{'PRUEBA DE TOLERANCIA ORAL A LA GLUCOSA'}}</th>
+                        <th>{{'Grupo Sanguineo'}}</th>
+                        <th>{{'Factor RH'}}</th>
+                        <th>{{Serologia}}</th>
+                        <th>{{'HCG EN SANGRE'}}</th>
+                        <th>{{'PSA (prostatico)'}}</th>
+                        <th>{{'POLIMORFOS NUCLEARES EN MATERIA FECAL'}}</th>
+                        <th>{{'COPROPARASITOLOGICO SERIADO'}}</th>
+                        <th>{{'ESCOBILLADO ANAL'}}</th>
+                        <th>{{'PROTEINURIA (24 hs)'}}</th>
+                        <th>{{'EXUDADO VAGINAL - ANAL'}}</th>
+                        <th>{{'HbA1c (hemoglobina glicosilada)'}}</th>
+                        <th>{{'TIROIDE (TSH)'}}</th>
+                        <th>{{'TIROIDE (T4)'}}</th>
+                        <th>{{STROUT}}</th>
+                        <th>{{'IGA -TGG (celiuaquia)'}}</th>
+                        <th>{{'SOMF (sangre oculta en materia fecal)'}}</th>
+                        <th>{{IONOGRAMA}}</th>
+
+                        {{!-- <td>
+                            <form action="/protocolo/seek/{{_id}}" method="POST">
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-block" type="submit">
+                                        Ver
+                                    </button>
+                                </div>
+                            </form>
+                        </td> --}}
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        {{else}}
+            <div class="card mx-auto">
+                <div class="card-body">
+                    <h3 class="px-auto" >SIN PACIENTE</h3>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</div>
+
