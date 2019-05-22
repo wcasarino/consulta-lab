@@ -26,7 +26,7 @@ router.post('/paciente/seek', isAuthenticated, async (req, res) => {
         .limit(15)
         .sort({ Fecha: -1 });
         viewModel.pacientes = pacientes;
-        console.log(pacientes);
+        //console.log(pacientes);
         res.render('pacientes/seek-paciente', viewModel );
     }
 });
@@ -43,7 +43,7 @@ router.post('/protocolo/seek/:id', isAuthenticated, async (req, res) => {
     viewModel.pacientes = pacientes;
     viewModel.protocolo = protocolo;
     viewModel.DNI = protocolo.Paciente.DNI;
-    //console.log(viewModel);
+    console.log(protocolo);
     res.render('pacientes/seek-paciente', viewModel );
     //res.send('ok');
 });
