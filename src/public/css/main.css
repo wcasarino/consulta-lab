@@ -14,3 +14,9 @@ body {
 .sizeFecha{
     width: 90px;
 }
+
+span { font-size: x-small; }
+
+p {
+    line-height: 1;
+}

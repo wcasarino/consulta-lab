@@ -1,124 +1,251 @@
 <div class="container">
-<div class="card mb-2">
-    <div class="card-header bg-dark text-white">
-        <h5>{{#if protocolo.Paciente}} {{protocolo.Paciente.Nombre}} del {{formatFecha protocolo.Fecha}} {{/if}}</h5>
-    </div>
-    <div class="card-body">
-        {{#if protocolo}}
+    <div class="card mb-2">
+        <div class="card-header bg-dark text-white">
+            <h5>{{#if protocolo.Paciente}} {{protocolo.Paciente.Nombre}} ---- Protocolo {{protocolo.Protocolo}} ----  Fecha {{formatFecha protocolo.Fecha}} {{/if}}
+            </h5>
+        </div>
+        <div class="card-body">
+            {{#if protocolo}}
             {{!-- <p>Nombre:  {{#if protocolo.Paciente}} {{protocolo.Paciente.Nombre}} {{/if}}</p> --}}
             <div class="row">
-            <div class="col-4">
-                <div class="card">
-                    <div class="card-header">
-                        Hemograma
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Hemograma
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.Hemograma.Eritrocitos}}<p>Eritrocitos: <strong>{{protocolo.Hemograma.Eritrocitos}}</strong> <span> mm3</span></p>{{/if}}
+                            {{#if protocolo.Hemograma.Hemoglobina}}<p>Hemoglobina: <strong>{{protocolo.Hemograma.Hemoglobina}}</strong><span> g/dl</span></p>{{/if}}
+                            {{#if protocolo.Hemograma.Hematocritos}}<p>Hematocritos: <strong>{{protocolo.Hemograma.Hematocritos}}</strong><span> %</span></p>{{/if}}
+                            {{#if protocolo.Hemograma.Leucocitos}}<p>Leucocitos: <strong>{{protocolo.Hemograma.Leucocitos}}</strong><span> mm3</span></p>{{/if}}
+                            {{#if protocolo.Hemograma.Plaquetas}}<p>Plaquetas: <strong>{{protocolo.Hemograma.Plaquetas}}</strong><span> mm3</span></p>{{/if}}
+                            {{#if protocolo.Hemograma.Eritrosedimentacion}}<p>Eritrosedimentacion: <strong>{{protocolo.Hemograma.Eritrosedimentacion}}</strong><span> mm</span></p>{{/if}}
+                        </div>
                     </div>
-                    <div class="card-body">
-                        {{#if protocolo.Hemograma.Eritrocitos}}<p>Eritrocitos: {{protocolo.Hemograma.Eritrocitos}}</p>{{/if}}
-                        {{#if protocolo.Hemograma.Hemoglobina}}<p>Hemoglobina: {{protocolo.Hemograma.Hemoglobina}}</p>{{/if}}
-                        {{#if protocolo.Hemograma.Hematocritos}}<p>Hematocritos: {{protocolo.Hemograma.Hematocritos}}</p>{{/if}}
-                        {{#if protocolo.Hemograma.Leucocitos}}<p>Leucocitos: {{protocolo.Hemograma.Leucocitos}}</p>{{/if}}
-                        {{#if protocolo.Hemograma.Plaquetas}}<p>Plaquetas: {{protocolo.Hemograma.Plaquetas}}</p>{{/if}}
-                        {{#if protocolo.Hemograma.Eritrosedimentacion}}<p>Eritrosedimentacion: {{protocolo.Hemograma.Eritrosedimentacion}}</p>{{/if}}
-                    </div>                
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="card">
-                    <div class="card-header">
-                        Formula Leucocitaria
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Formula Leucocitaria
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.Formula_Leucocitaria.Neutrofilos_en_cayados}}<p>Neutrofilos encayados: <strong>{{protocolo.Formula_Leucocitaria.Neutrofilos_en_cayados}}</strong><span> %</span></p>{{/if}}
+                            {{#if protocolo.Formula_Leucocitaria.Neutrofilos_segmentados}}<p>Neutrofilos segmentados: <strong>{{protocolo.Formula_Leucocitaria.Neutrofilos_segmentados}}</strong><span> %</span></p>{{/if}}
+                            {{#if protocolo.Formula_Leucocitaria.Eosinofilos}}<p>Eosinofilos: <strong>{{protocolo.Formula_Leucocitaria.Eosinofilos}}</strong><span> %</span></p>{{/if}}
+                            {{#if protocolo.Formula_Leucocitaria.Basofilos}}<p>Basofilos: <strong>{{protocolo.Formula_Leucocitaria.Basofilos}}</strong><span> %</span></p>{{/if}}
+                            {{#if protocolo.Formula_Leucocitaria.Linfocitos}}<p>Linfocitos: <strong>{{protocolo.Formula_Leucocitaria.Linfocitos}}</strong><span> %</span></p>{{/if}}
+                            {{#if protocolo.Formula_Leucocitaria.Monocitos}}<p>Monocitos: <strong>{{protocolo.Formula_Leucocitaria.Monocitos}}</strong><span> %</span></p>{{/if}}
+                            {{#if protocolo.Formula_Leucocitaria.Alteraciones}}<p>Alteraciones: <strong>{{protocolo.Formula_Leucocitaria.Alteraciones}}</strong></p>{{/if}}
+                        </div>
                     </div>
-                    <div class="card-body">
-                        {{#if protocolo.Formula_Leucocitaria.Neutrofilos_en_cayados}}<p>Neutrofilos_en_cayados: {{protocolo.Formula_Leucocitaria.Neutrofilos_en_cayados}}</p>{{/if}}
-                        {{#if protocolo.Formula_Leucocitaria.Neutrofilos_segmentados}}<p>Neutrofilos_segmentados: {{protocolo.Formula_Leucocitaria.Neutrofilos_segmentados}}</p>{{/if}}
-                        {{#if protocolo.Formula_Leucocitaria.Eosinofilos}}<p>Eosinofilos: {{protocolo.Formula_Leucocitaria.Eosinofilos}}</p>{{/if}}
-                        {{#if protocolo.Formula_Leucocitaria.Basofilos}}<p>Basofilos: {{protocolo.Formula_Leucocitaria.Basofilos}}</p>{{/if}}
-                        {{#if protocolo.Formula_Leucocitaria.Monocitos}}<p>Monocitos: {{protocolo.Formula_Leucocitaria.Monocitos}}</p>{{/if}}
-                        {{#if protocolo.Formula_Leucocitaria.Alteraciones}}<p>Alteraciones: {{protocolo.Formula_Leucocitaria.Alteraciones}}</p>{{/if}}
-                    </div>                
                 </div>
-            </div>
-            <div class="col-4">
-                <div class="card">
-                    <div class="card-header">
-                        Orina
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Analisis quimico
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.Analisis_quimico.Glucemia}}<p>Glucemia: <strong>{{protocolo.Analisis_quimico.Glucemia}}</strong><span> g/l (VR: 0,7 - 1,1 g/l)</span></p>{{/if}}
+                            {{#if protocolo.Analisis_quimico.Uremia}}<p>Uremia: <strong>{{protocolo.Analisis_quimico.Uremia}}</strong><span> g/l (VR: 0,7 - 1,1 g/l)</span></p>{{/if}}
+                            {{#if protocolo.Analisis_quimico.Colesterol}}<p>Colesterol: <strong>{{protocolo.Analisis_quimico.Colesterol}}</strong><span> g/l (VR: < de 2 g/l)</span></p>{{/if}}
+                            {{#if protocolo.Analisis_quimico.HDL_colesterol}}<p>HDL colesterol: <strong>{{protocolo.Analisis_quimico.HDL_colesterol}}</strong><span> g/l (VR: 0,4 - 0,6 g/l)</span></p>{{/if}}
+                            {{#if protocolo.Analisis_quimico.LDL_colesterol}}<p>LDL colesterol: <strong>{{protocolo.Analisis_quimico.LDL_colesterol}}</strong><span> g/l (VR: < 1,29 g/l)</span></p>{{/if}}
+                            {{#if protocolo.Analisis_quimico.Trigliceridos}}<p>Trigliceridos: <strong>{{protocolo.Analisis_quimico.Trigliceridos}}</strong><span> g/l (VR.< 1,5 g/l)</span></p>{{/if}}
+                            {{#if protocolo.Analisis_quimico.Calcemia}}<p>Calcemia: <strong>{{protocolo.Analisis_quimico.Calcemia}}</strong><span> mg/dl (VR: 8,5 - 10,5)</span></p>{{/if}}
+                            {{#if protocolo.Analisis_quimico.Acido_Urico}}<p>Acido Urico: <strong>{{protocolo.Analisis_quimico.Acido_Urico}}</strong><span> mg/l (H: h'60  M:h'50)</span></p>{{/if}}
+                            {{#if protocolo.Analisis_quimico.Creatinina}}<p>Creatinina: <strong>{{protocolo.Analisis_quimico.Creatinina}}</strong><span> mg/l (VR: 6 - 13 mg/l)</span></p>{{/if}}
+                            {{#if protocolo.Analisis_quimico.indice_proteinuria_creatininuria}}<p>indice proteinuria creatininuria: <strong>{{protocolo.Analisis_quimico.indice_proteinuria_creatininuria}}</strong><span> mg/g (VR: <150 mg/g)</span></p>{{/if}}
+                            {{#if protocolo.Analisis_quimico.MDRD_4_IDMS}}<p>MDRD_4_IDMS: <strong>{{protocolo.Analisis_quimico.MDRD_4_IDMS}}</strong><span> mL/min/1,73 m2</span></p>{{/if}}
+                            {{#if protocolo.Analisis_quimico.Proteinas_Totales}}<p>Proteinas Totales: <strong>{{protocolo.Analisis_quimico.Proteinas_Totales}}</strong><span> g/l (VR: 6,1 - 7,9 g/l)</span></p>{{/if}}
+                            {{#if protocolo.Analisis_quimico.Albumina}}<p>Albumina: <strong>{{protocolo.Analisis_quimico.Albumina}}</strong><span> g/l (VR: 3,5 - 4,8 g/l)</span></p>{{/if}}
+                        </div>
                     </div>
-                    <div class="card-body">
-                        {{#if protocolo.Orina.Color}}<p>Color: {{protocolo.Orina.Color}}</p>{{/if}}
-                        {{#if protocolo.Orina.Aspecto}}<p>Aspecto: {{protocolo.Orina.Aspecto}}</p>{{/if}}
-                        {{#if protocolo.Orina.pH}}<p>pH: {{protocolo.Orina.pH}}</p>{{/if}}
-                        {{#if protocolo.Orina.Densidad}}<p>Densidad: {{protocolo.Orina.Densidad}}</p>{{/if}}
-                        {{#if protocolo.Orina.Proteinas}}<p>Proteinas: {{protocolo.Orina.Proteinas}}</p>{{/if}}
-                        {{#if protocolo.Orina.Glucosa}}<p>Glucosa: {{protocolo.Orina.Glucosa}}</p>{{/if}}
-                        {{#if protocolo.Orina.C_Cetonicos}}<p>C_Cetonicos: {{protocolo.Orina.C_Cetonicos}}</p>{{/if}}
-                        {{#if protocolo.Orina.Pigm_Biliares}}<p>Pigm_Biliares: {{protocolo.Orina.Pigm_Biliares}}</p>{{/if}}
-                        {{#if protocolo.Orina.Hemoglobina}}<p>Hemoglobina: {{protocolo.Orina.Hemoglobina}}</p>{{/if}}
-                        
-                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Celulas}} <h6 class="mx-auto">Examen Microscopico de Sedimento: </h6>{{/if}}
-                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Leucocitos}}<p>Leucocitos: {{protocolo.Examen_Microscopico_de_Sedimento.Leucocitos}}</p>{{/if}}
-                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Hematies}}<p>Hematies: {{protocolo.Examen_Microscopico_de_Sedimento.Hematies}}</p>{{/if}}
-                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Cilindros}}<p>Cilindros: {{protocolo.Examen_Microscopico_de_Sedimento.Cilindros}}</p>{{/if}}
-                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Cristales}}<p>Cristales: {{protocolo.Examen_Microscopico_de_Sedimento.Cristales}}</p>{{/if}}
-                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Bacteriuria}}<p>Bacteriuria: {{protocolo.Examen_Microscopico_de_Sedimento.Bacteriuria}}</p>{{/if}}
-                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Mucus}}<p>Mucus: {{protocolo.Examen_Microscopico_de_Sedimento.Mucus}}</p>{{/if}}
-                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Observaciones}}<p>Observaciones: {{protocolo.Examen_Microscopico_de_Sedimento.Observaciones}}</p>{{/if}}
-                    </div>                
                 </div>
-            </div>
-            <div class="col-4 mt-2">
-                <div class="card">
-                    <div class="card-header">
-                        Urocultivo
-                    </div>
-                    <div class="card-body">
-                        {{#if protocolo.Sedimento_urinario.Recuento_de_Colonias}}<p>Recuento_de_Colonias: {{protocolo.Sedimento_urinario.Recuento_de_Colonias}}</p>{{/if}}
-                        {{#if protocolo.Sedimento_urinario.Tipificacion}}<p>Tipificacion: {{protocolo.Sedimento_urinario.Tipificacion}}</p>{{/if}}
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Orina
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.Orina.Color}}<p>Color: <strong>{{protocolo.Orina.Color}}</strong></p>{{/if}}
+                            {{#if protocolo.Orina.Aspecto}}<p>Aspecto: <strong>{{protocolo.Orina.Aspecto}}</strong></p>{{/if}}
+                            {{#if protocolo.Orina.pH}}<p>pH: <strong>{{protocolo.Orina.pH}}</strong></p>{{/if}}
+                            {{#if protocolo.Orina.Densidad}}<p>Densidad: <strong>{{protocolo.Orina.Densidad}}</strong></p>{{/if}}
+                            {{#if protocolo.Orina.Proteinas}}<p>Proteinas: <strong>{{protocolo.Orina.Proteinas}}</strong></p>{{/if}}
+                            {{#if protocolo.Orina.Glucosa}}<p>Glucosa: <strong>{{protocolo.Orina.Glucosa}}</strong></p>{{/if}}
+                            {{#if protocolo.Orina.C_Cetonicos}}<p>C. Cetonicos: <strong>{{protocolo.Orina.C_Cetonicos}}</strong></p>{{/if}}
+                            {{#if protocolo.Orina.Pigm_Biliares}}<p>Pigm. Biliares: <strong>{{protocolo.Orina.Pigm_Biliares}}</strong></p>{{/if}}
+                            {{#if protocolo.Orina.Hemoglobina}}<p>Hemoglobina: <strong>{{protocolo.Orina.Hemoglobina}}</strong></p>{{/if}}
 
-                        {{#if protocolo.Antibiograma.Sensibles}} <h6>Antibiograma: </h6>{{/if}}
-                        {{#if protocolo.Antibiograma.Sensibles}}<p>Sensibles: {{protocolo.Antibiograma.Sensibles}}</p>{{/if}}
-                        {{#if protocolo.Antibiograma.Resistentes}}<p>Resistentes: {{protocolo.Antibiograma.Resistentes}}</p>{{/if}}
-                        {{#if protocolo.Antibiograma.Observaciones}}<p>Observaciones: {{protocolo.Antibiograma.Observaciones}}</p>{{/if}}
+                            {{#if protocolo.Examen_Microscopico_de_Sedimento.Celulas}} <h6 class="bg-dark text-white mx-auto">Examen Microscopico de Sedimento: </h6>{{/if}}
+                            
+                            {{#if protocolo.Examen_Microscopico_de_Sedimento.Celulas}}<p>Celulas: <strong>{{protocolo.Examen_Microscopico_de_Sedimento.Celulas}}</strong><span> cantidad</span></p>{{/if}}
+                            {{#if protocolo.Examen_Microscopico_de_Sedimento.Leucocitos}}<p>Leucocitos: <strong>{{protocolo.Examen_Microscopico_de_Sedimento.Leucocitos}}</strong><span> por campo</span></p>{{/if}}
+                            {{#if protocolo.Examen_Microscopico_de_Sedimento.Hematies}}<p>Hematies: <strong>{{protocolo.Examen_Microscopico_de_Sedimento.Hematies}}</strong><span> por campo</span></p>{{/if}}
+                            {{#if protocolo.Examen_Microscopico_de_Sedimento.Cilindros}}<p>Cilindros: <strong>{{protocolo.Examen_Microscopico_de_Sedimento.Cilindros}}</strong></p>{{/if}}
+                            {{#if protocolo.Examen_Microscopico_de_Sedimento.Cristales}}<p>Cristales: <strong>{{protocolo.Examen_Microscopico_de_Sedimento.Cristales}}</strong></p>{{/if}}
+                            {{#if protocolo.Examen_Microscopico_de_Sedimento.Bacteriuria}}<p>Bacteriuria: <strong>{{protocolo.Examen_Microscopico_de_Sedimento.Bacteriuria}}</strong><span> cantidad</span></p>{{/if}}
+                            {{#if protocolo.Examen_Microscopico_de_Sedimento.Mucus}}<p>Mucus: <strong>{{protocolo.Examen_Microscopico_de_Sedimento.Mucus}}</strong></p>{{/if}}
+                            {{#if protocolo.Examen_Microscopico_de_Sedimento.Observaciones}}<p>Observaciones: <strong>{{protocolo.Examen_Microscopico_de_Sedimento.Observaciones}}</strong></p>{{/if}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Urocultivo
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.Sedimento_urinario.Recuento_de_Colonias}}<p>Recuento de Colonias: <strong>{{protocolo.Sedimento_urinario.Recuento_de_Colonias}}</strong><span> UFC/ml de orina</span></p>{{/if}}
+                            {{#if protocolo.Sedimento_urinario.Tipificacion}}<p>Tipificacion: <strong>{{protocolo.Sedimento_urinario.Tipificacion}}</strong></p>{{/if}}
 
-                    </div>                
-                </div>
-            </div>
-            <div class="col-4 mt-2">
-                <div class="card">
-                    <div class="card-header">
-                        Analisis quimico
+                            {{#if protocolo.Antibiograma.Sensibles}} <h6 class="bg-dark text-white">Antibiograma: </h6>{{/if}}
+                            {{#if protocolo.Antibiograma.Sensibles}}<p>Sensibles: <strong>{{protocolo.Antibiograma.Sensibles}}</strong></p>{{/if}}
+                            {{#if protocolo.Antibiograma.Resistentes}}<p>Resistentes: <strong>{{protocolo.Antibiograma.Resistentes}}</strong></p>{{/if}}
+                            {{#if protocolo.Antibiograma.Observaciones}}<p>Observaciones: <strong>{{protocolo.Antibiograma.Observaciones}}</strong></p>{{/if}}
+
+                        </div>
                     </div>
-                    <div class="card-body">
-                        {{#if protocolo.Analisis_quimico.Glucemia}}<p>Glucemia: {{protocolo.Analisis_quimico.Glucemia}}</p>{{/if}}
-                        {{#if protocolo.Analisis_quimico.Uremia}}<p>Uremia: {{protocolo.Analisis_quimico.Uremia}}</p>{{/if}}
-                        {{#if protocolo.Analisis_quimico.Colesterol}}<p>Colesterol: {{protocolo.Analisis_quimico.Colesterol}}</p>{{/if}}
-                        {{#if protocolo.Analisis_quimico.HDL_colesterol}}<p>HDL_colesterol: {{protocolo.Analisis_quimico.HDL_colesterol}}</p>{{/if}}
-                        {{#if protocolo.Analisis_quimico.LDL_colesterol}}<p>LDL_colesterol: {{protocolo.Analisis_quimico.LDL_colesterol}}</p>{{/if}}
-                        {{#if protocolo.Analisis_quimico.Trigliceridos}}<p>Trigliceridos: {{protocolo.Analisis_quimico.Trigliceridos}}</p>{{/if}}
-                        {{#if protocolo.Analisis_quimico.Calcemia}}<p>Calcemia: {{protocolo.Analisis_quimico.Calcemia}}</p>{{/if}}
-                        {{#if protocolo.Analisis_quimico.Acido_Urico}}<p>Acido_Urico: {{protocolo.Analisis_quimico.Acido_Urico}}</p>{{/if}}
-                        {{#if protocolo.Analisis_quimico.Creatinina}}<p>Creatinina: {{protocolo.Analisis_quimico.Creatinina}}</p>{{/if}}
-                        {{#if protocolo.Analisis_quimico.indice_proteinuria_creatininuria}}<p>indice_proteinuria_creatininuria: {{protocolo.Analisis_quimico.indice_proteinuria_creatininuria}}</p>{{/if}}
-                        {{#if protocolo.Analisis_quimico.MDRD_4_IDMS}}<p>MDRD_4_IDMS: {{protocolo.Analisis_quimico.MDRD_4_IDMS}}</p>{{/if}}
-                        {{#if protocolo.Analisis_quimico.Proteinas_Totales}}<p>Proteinas_Totales: {{protocolo.Analisis_quimico.Proteinas_Totales}}</p>{{/if}}
-                        {{#if protocolo.Analisis_quimico.Albumina}}<p>Albumina: {{protocolo.Analisis_quimico.Albumina}}</p>{{/if}}
-                    </div>                
                 </div>
-            </div>
-            <div class="col-4 mt-2">
-                <div class="card">
-                    <div class="card-header">
-                        Enzimas
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Serologia
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.Serologia.VDRL}}<p>VDRL: <strong>{{protocolo.Serologia.VDRL}}</strong></p>{{/if}}
+                            {{#if protocolo.Serologia.PRUEBA_TREPONEMICA}}<p>Prueba Treponemica: <strong>{{protocolo.Serologia.PRUEBA_TREPONEMICA}}</strong></p>{{/if}}
+                            {{#if protocolo.Serologia.Chagas_HAI_y_ELISA}}<p>Chagas HAI y ELISA: <strong>{{protocolo.Serologia.Chagas_HAI_y_ELISA}}</strong></p>{{/if}}
+                            {{#if protocolo.Serologia.Chagas_HAI}}<p>Chagas HAI: <strong>{{protocolo.Serologia.Chagas_HAI}}</strong></p>{{/if}}
+                            {{#if protocolo.Serologia.Chagas_ELISA}}<p>Chagas ELISA: <strong>{{protocolo.Serologia.Chagas_ELISA}}</strong></p>{{/if}}
+                            {{#if protocolo.Serologia.Huddleson}}<p>Huddleson: <strong>{{protocolo.Serologia.Huddleson}}</strong></p>{{/if}}
+                            {{#if protocolo.Serologia.Toxoplasmosis_AD}}<p>Toxoplasmosis AD: <strong>{{protocolo.Serologia.Toxoplasmosis_AD}}</strong></p>{{/if}}
+                            {{#if protocolo.Serologia.HIV_AP}}<p>HIV AP: <strong>{{protocolo.Serologia.HIV_AP}}</strong></p>{{/if}}
+                            {{#if protocolo.Serologia.HBsAg}}<p>HBsAg: <strong>{{protocolo.Serologia.HBsAg}}</strong></p>{{/if}}
+                            {{#if protocolo.Serologia.HCV}}<p>HCV: <strong>{{protocolo.Serologia.HCV}}</strong></p>{{/if}}
+                            {{#if protocolo.Serologia.Toxoplasmosis_IGM}}<p>Toxoplasmosis IGM: <strong>{{protocolo.Serologia.Toxoplasmosis_IGM}}</strong></p>{{/if}}
+                            {{#if protocolo.Serologia.AELO}}<p>AELO: <strong>{{protocolo.Serologia.AELO}}</strong></p>{{/if}}
+                            {{#if protocolo.Serologia.Artritest}}<p>Artritest: <strong>{{protocolo.Serologia.Artritest}}</strong></p>{{/if}}
+                            {{#if protocolo.Serologia.Proteina_C_Reactiva}}<p>Proteina C Reactiva: <strong>{{protocolo.Serologia.Proteina_C_Reactiva}}</strong></p>{{/if}}
+                        </div>
                     </div>
-                    <div class="card-body">
-                        {{#if protocolo.Enzimas.GOT}}<p>GOT: {{protocolo.Enzimas.GOT}}</p>{{/if}}
-                        {{#if protocolo.Enzimas.GPT}}<p>GPT: {{protocolo.Enzimas.GPT}}</p>{{/if}}
-                        {{#if protocolo.Enzimas.Fosfatasa_Alc}}<p>Fosfatasa_Alc: {{protocolo.Enzimas.Fosfatasa_Alc}}</p>{{/if}}
-                        {{#if protocolo.Enzimas.GammaGT}}<p>GammaGT: {{protocolo.Enzimas.GammaGT}}</p>{{/if}}
-                        {{#if protocolo.Enzimas.Amilasa}}<p>Amilasa: {{protocolo.Enzimas.Amilasa}}</p>{{/if}}
-                    </div>                
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Enzimas
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.Enzimas.GOT}}<p>GOT: <strong>{{protocolo.Enzimas.GOT}}</strong><span> U/L (VR: H: h' 38  M: h' 32)</span></p>{{/if}}
+                            {{#if protocolo.Enzimas.GPT}}<p>GPT: <strong>{{protocolo.Enzimas.GPT}}</strong><span> U/L (VR: H: h' 41  M: h' 31)</span></p>{{/if}}
+                            {{#if protocolo.Enzimas.Fosfatasa_Alc}}<p>Fosfatasa Alc: <strong>{{protocolo.Enzimas.Fosfatasa_Alc}}</strong><span> U/L (Adul: h' 300 Niñ: h' 645)</span></p>{{/if}}
+                            {{#if protocolo.Enzimas.GammaGT}}<p>GammaGT: <strong>{{protocolo.Enzimas.GammaGT}}</strong><span> U/L (H:h'50  M:h' 32)</span></p>{{/if}}
+                            {{#if protocolo.Enzimas.Amilasa}}<p>Amilasa: <strong>{{protocolo.Enzimas.Amilasa}}</strong><span> U/L (h'125)</span></p>{{/if}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Bilirrubina
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.Bilirrubina.Total}}<p>Total: <strong>{{protocolo.Bilirrubina.Total}}</strong><span> mg/dl</span></p>{{/if}}
+                            {{#if protocolo.Bilirrubina.Directa}}<p>Directa: <strong>{{protocolo.Bilirrubina.Directa}}</strong><span> mg/dl</span></p>{{/if}}
+                            {{#if protocolo.Bilirrubina.Indirecta}}<p>Indirecta: <strong>{{protocolo.Bilirrubina.Indirecta}}</strong><span> mg/dl</span></p>{{/if}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Coagulacion
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.Coagulacion.Protrombina}}<p>Protrombina: <strong>{{protocolo.Coagulacion.Protrombina}}</strong><span> Seg.</span></p>{{/if}}
+                            {{#if protocolo.Coagulacion.Actividad}}<p>Actividad: <strong>{{protocolo.Coagulacion.Actividad}}</strong><span> %</span></p>{{/if}}
+                            {{#if protocolo.Coagulacion.KPTT}}<p>KPTT: <strong>{{protocolo.Coagulacion.KPTT}}</strong><span> Seg.</span></p>{{/if}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Prueba Tolerancia oral a la glucosa
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_en_ayunas}}<p>Glucemia en ayunas: <strong>{{protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_en_ayunas}}</strong></p>{{/if}}
+                            {{#if protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_a_los_60_min_post_sobrecarga}}<p>GLU 60 min post sobrecarga: <strong>{{protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_a_los_60_min_post_sobrecarga}}</strong></p>{{/if}}
+                            {{#if protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_a_los_120_minutos_post_sobrecarga}}<p>GLU 120 min post sobrecarga: <strong>{{protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_a_los_120_minutos_post_sobrecarga}}</strong></p>{{/if}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Grupo Sanguineo
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.Grupo_Sanguineo}}<p>Grupo Sanguineo: <strong>{{protocolo.Grupo_Sanguineo}}</strong></p>{{/if}}
+                            {{#if protocolo.Factor_RH}}<p>Factor RH: <strong>{{protocolo.Factor_RH}}</strong></p>{{/if}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            IONOGRAMA
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.IONOGRAMA.cNa}}<p>cNa+: <strong>{{protocolo.IONOGRAMA.cNa}}</strong><span> mmol/l (VR: 135 - 148 mmol/l)</span></p>{{/if}}
+                            {{#if protocolo.IONOGRAMA.cK}}<p>cK+: <strong>{{protocolo.IONOGRAMA.cK}}</strong><span> mmol/l (VR: 3,7 - 5,3 mmol/l)</span></p>{{/if}}
+                            {{#if protocolo.IONOGRAMA.cCl}}<p>cCl-: <strong>{{protocolo.IONOGRAMA.cCl}}</strong><span> mmol/l (VR: 98 - 109 mmol/l)</span></p>{{/if}}
+                            {{#if protocolo.IONOGRAMA.cCa}}<p>cCa++: <strong>{{protocolo.IONOGRAMA.cCa}}</strong><span> mmol/l (VR: 1,0 - 1,4 mmol/l)</span></p>{{/if}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Otros
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.HCG_EN_SANGRE}}<p>HCG en sangre: <strong>{{protocolo.HCG_EN_SANGRE}}</strong></p>{{/if}}
+                            {{#if protocolo.EXUDADO_VAGINAL_ANAL}}<p>Exudado vaginal anal: <strong>{{protocolo.EXUDADO_VAGINAL_ANAL}}</strong></p>{{/if}}
+                            {{#if protocolo.PROTEINURIA_24_hs}}<p>Proteinuria 24hs: <strong>{{protocolo.PROTEINURIA_24_hs}}</strong><span> mg/24hs (VR: 30-140 mg/24hs)</span></p>{{/if}}
+                            {{#if protocolo.STROUT}}<p>STROUT: <strong>{{protocolo.STROUT}}</strong></p>{{/if}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Otros
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.TIROIDE_TSH}}<p>TIROIDE TSH: <strong>{{protocolo.TIROIDE_TSH}}</strong><span> uUI/ml (VR: 0,27 - 4,2 uUI/ml)</span></p>{{/if}}
+                            {{#if protocolo.TIROIDE_T4}}<p>TIROIDE T4: <strong>{{protocolo.TIROIDE_T4}}</strong><span> ug/dl (VR: 4,6 - 12 ug/dl)</span></p>{{/if}}
+                            {{#if protocolo.IGA_TGG_celiuaquia}}<p>IGA TGG celiuaquia: <strong>{{protocolo.IGA_TGG_celiuaquia}}</strong><span> UI/ml (VR: hasta 10UI/ml)</span></p>{{/if}}
+                            {{#if protocolo.HbA1c_hemoglobina_glicosilada}}<p>HbA1c hemoglobina glicosilada: <strong>{{protocolo.HbA1c_hemoglobina_glicosilada}}</strong><span> % (VR: 4,8 a 6%)</span></p>{{/if}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            Otros
+                        </div>
+                        <div class="card-body">
+                            {{#if protocolo.PSA_prostatico}}<p>PSA prostatico: <strong>{{protocolo.PSA_prostatico}}</strong><span> ng/ml (VR: menor a 4 ng/ml)</span></p>{{/if}}
+                            {{#if protocolo.POLIMORFOS_NUCLEARES_EN_MATERIA_FECAL}}<p>Polimorfos nucleares en materia fecal: <strong>{{protocolo.POLIMORFOS_NUCLEARES_EN_MATERIA_FECAL}}</strong></p>{{/if}}
+                            {{#if protocolo.COPROPARASITOLOGICO_SERIADO}}<p>COPROPARASITOLOGICO SERIADO: <strong>{{protocolo.COPROPARASITOLOGICO_SERIADO}}</strong></p>{{/if}}
+                            {{#if protocolo.ESCOBILLADO_ANAL}}<p>ESCOBILLADO ANAL: <strong>{{protocolo.ESCOBILLADO_ANAL}}</strong></p>{{/if}}
+                            {{#if protocolo.SOMF_sangre_oculta_en_materia_fecal}}<p>SOMF sangre oculta en materia fecal: <strong>{{protocolo.SOMF_sangre_oculta_en_materia_fecal}}</strong></p>{{/if}}
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
-        {{/if}}
+            {{/if}}
+        </div>
     </div>
-</div>
 </div>
