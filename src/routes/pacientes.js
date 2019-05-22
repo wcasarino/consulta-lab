@@ -11,7 +11,7 @@ router.get('/paciente/seek', isAuthenticated, (req, res) => {
 
 router.post('/paciente/seek', isAuthenticated, async (req, res) => {
     const { DNI } = req.body;
-    console.log(req.body)
+    //console.log(req.body)
     let viewModel = { DNI: String, pacientes: {}, protocolo: {} };
     viewModel.DNI = DNI;
     const errors = [];
@@ -43,7 +43,7 @@ router.post('/protocolo/seek/:id', isAuthenticated, async (req, res) => {
     viewModel.pacientes = pacientes;
     viewModel.protocolo = protocolo;
     viewModel.DNI = protocolo.Paciente.DNI;
-    console.log(protocolo);
+    //console.log(protocolo);
     res.render('pacientes/seek-paciente', viewModel );
     //res.send('ok');
 });

@@ -1,28 +1,124 @@
+<div class="container">
 <div class="card mb-2">
     <div class="card-header bg-dark text-white">
-        <h5>Protocolo</h5>
+        <h5>{{#if protocolo.Paciente}} {{protocolo.Paciente.Nombre}} del {{formatFecha protocolo.Fecha}} {{/if}}</h5>
     </div>
     <div class="card-body">
-        {{#each protocolo}}
-            {{#if Paciente}} <p>Nombre:  {{Paciente.Nombre}}</p>{{/if}}
-            {{#if Hemograma.Eritrocitos}}<p>Eritrocitos: {{Hemograma.Eritrocitos}}</p>{{/if}}
-            {{'Formula Leucocitaria'}}
-            {{#each 'Formula Leucocitaria'}}
+        {{#if protocolo}}
+            {{!-- <p>Nombre:  {{#if protocolo.Paciente}} {{protocolo.Paciente.Nombre}} {{/if}}</p> --}}
+            <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        Hemograma
+                    </div>
+                    <div class="card-body">
+                        {{#if protocolo.Hemograma.Eritrocitos}}<p>Eritrocitos: {{protocolo.Hemograma.Eritrocitos}}</p>{{/if}}
+                        {{#if protocolo.Hemograma.Hemoglobina}}<p>Hemoglobina: {{protocolo.Hemograma.Hemoglobina}}</p>{{/if}}
+                        {{#if protocolo.Hemograma.Hematocritos}}<p>Hematocritos: {{protocolo.Hemograma.Hematocritos}}</p>{{/if}}
+                        {{#if protocolo.Hemograma.Leucocitos}}<p>Leucocitos: {{protocolo.Hemograma.Leucocitos}}</p>{{/if}}
+                        {{#if protocolo.Hemograma.Plaquetas}}<p>Plaquetas: {{protocolo.Hemograma.Plaquetas}}</p>{{/if}}
+                        {{#if protocolo.Hemograma.Eritrosedimentacion}}<p>Eritrosedimentacion: {{protocolo.Hemograma.Eritrosedimentacion}}</p>{{/if}}
+                    </div>                
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        Formula Leucocitaria
+                    </div>
+                    <div class="card-body">
+                        {{#if protocolo.Formula_Leucocitaria.Neutrofilos_en_cayados}}<p>Neutrofilos_en_cayados: {{protocolo.Formula_Leucocitaria.Neutrofilos_en_cayados}}</p>{{/if}}
+                        {{#if protocolo.Formula_Leucocitaria.Neutrofilos_segmentados}}<p>Neutrofilos_segmentados: {{protocolo.Formula_Leucocitaria.Neutrofilos_segmentados}}</p>{{/if}}
+                        {{#if protocolo.Formula_Leucocitaria.Eosinofilos}}<p>Eosinofilos: {{protocolo.Formula_Leucocitaria.Eosinofilos}}</p>{{/if}}
+                        {{#if protocolo.Formula_Leucocitaria.Basofilos}}<p>Basofilos: {{protocolo.Formula_Leucocitaria.Basofilos}}</p>{{/if}}
+                        {{#if protocolo.Formula_Leucocitaria.Monocitos}}<p>Monocitos: {{protocolo.Formula_Leucocitaria.Monocitos}}</p>{{/if}}
+                        {{#if protocolo.Formula_Leucocitaria.Alteraciones}}<p>Alteraciones: {{protocolo.Formula_Leucocitaria.Alteraciones}}</p>{{/if}}
+                    </div>                
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        Orina
+                    </div>
+                    <div class="card-body">
+                        {{#if protocolo.Orina.Color}}<p>Color: {{protocolo.Orina.Color}}</p>{{/if}}
+                        {{#if protocolo.Orina.Aspecto}}<p>Aspecto: {{protocolo.Orina.Aspecto}}</p>{{/if}}
+                        {{#if protocolo.Orina.pH}}<p>pH: {{protocolo.Orina.pH}}</p>{{/if}}
+                        {{#if protocolo.Orina.Densidad}}<p>Densidad: {{protocolo.Orina.Densidad}}</p>{{/if}}
+                        {{#if protocolo.Orina.Proteinas}}<p>Proteinas: {{protocolo.Orina.Proteinas}}</p>{{/if}}
+                        {{#if protocolo.Orina.Glucosa}}<p>Glucosa: {{protocolo.Orina.Glucosa}}</p>{{/if}}
+                        {{#if protocolo.Orina.C_Cetonicos}}<p>C_Cetonicos: {{protocolo.Orina.C_Cetonicos}}</p>{{/if}}
+                        {{#if protocolo.Orina.Pigm_Biliares}}<p>Pigm_Biliares: {{protocolo.Orina.Pigm_Biliares}}</p>{{/if}}
+                        {{#if protocolo.Orina.Hemoglobina}}<p>Hemoglobina: {{protocolo.Orina.Hemoglobina}}</p>{{/if}}
+                        
+                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Celulas}} <h6 class="mx-auto">Examen Microscopico de Sedimento: </h6>{{/if}}
+                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Leucocitos}}<p>Leucocitos: {{protocolo.Examen_Microscopico_de_Sedimento.Leucocitos}}</p>{{/if}}
+                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Hematies}}<p>Hematies: {{protocolo.Examen_Microscopico_de_Sedimento.Hematies}}</p>{{/if}}
+                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Cilindros}}<p>Cilindros: {{protocolo.Examen_Microscopico_de_Sedimento.Cilindros}}</p>{{/if}}
+                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Cristales}}<p>Cristales: {{protocolo.Examen_Microscopico_de_Sedimento.Cristales}}</p>{{/if}}
+                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Bacteriuria}}<p>Bacteriuria: {{protocolo.Examen_Microscopico_de_Sedimento.Bacteriuria}}</p>{{/if}}
+                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Mucus}}<p>Mucus: {{protocolo.Examen_Microscopico_de_Sedimento.Mucus}}</p>{{/if}}
+                        {{#if protocolo.Examen_Microscopico_de_Sedimento.Observaciones}}<p>Observaciones: {{protocolo.Examen_Microscopico_de_Sedimento.Observaciones}}</p>{{/if}}
+                    </div>                
+                </div>
+            </div>
+            <div class="col-4 mt-2">
+                <div class="card">
+                    <div class="card-header">
+                        Urocultivo
+                    </div>
+                    <div class="card-body">
+                        {{#if protocolo.Sedimento_urinario.Recuento_de_Colonias}}<p>Recuento_de_Colonias: {{protocolo.Sedimento_urinario.Recuento_de_Colonias}}</p>{{/if}}
+                        {{#if protocolo.Sedimento_urinario.Tipificacion}}<p>Tipificacion: {{protocolo.Sedimento_urinario.Tipificacion}}</p>{{/if}}
 
-                {{'Neutrofilos en cayados'}}
-                
-            {{/each}}
-        {{/each}}
+                        {{#if protocolo.Antibiograma.Sensibles}} <h6>Antibiograma: </h6>{{/if}}
+                        {{#if protocolo.Antibiograma.Sensibles}}<p>Sensibles: {{protocolo.Antibiograma.Sensibles}}</p>{{/if}}
+                        {{#if protocolo.Antibiograma.Resistentes}}<p>Resistentes: {{protocolo.Antibiograma.Resistentes}}</p>{{/if}}
+                        {{#if protocolo.Antibiograma.Observaciones}}<p>Observaciones: {{protocolo.Antibiograma.Observaciones}}</p>{{/if}}
 
-        {{pacientes}}
-
-
-      <br>
-      
-
-
-     <br>
-     {{!-- <p id="demo"></p>         --}}
-   
+                    </div>                
+                </div>
+            </div>
+            <div class="col-4 mt-2">
+                <div class="card">
+                    <div class="card-header">
+                        Analisis quimico
+                    </div>
+                    <div class="card-body">
+                        {{#if protocolo.Analisis_quimico.Glucemia}}<p>Glucemia: {{protocolo.Analisis_quimico.Glucemia}}</p>{{/if}}
+                        {{#if protocolo.Analisis_quimico.Uremia}}<p>Uremia: {{protocolo.Analisis_quimico.Uremia}}</p>{{/if}}
+                        {{#if protocolo.Analisis_quimico.Colesterol}}<p>Colesterol: {{protocolo.Analisis_quimico.Colesterol}}</p>{{/if}}
+                        {{#if protocolo.Analisis_quimico.HDL_colesterol}}<p>HDL_colesterol: {{protocolo.Analisis_quimico.HDL_colesterol}}</p>{{/if}}
+                        {{#if protocolo.Analisis_quimico.LDL_colesterol}}<p>LDL_colesterol: {{protocolo.Analisis_quimico.LDL_colesterol}}</p>{{/if}}
+                        {{#if protocolo.Analisis_quimico.Trigliceridos}}<p>Trigliceridos: {{protocolo.Analisis_quimico.Trigliceridos}}</p>{{/if}}
+                        {{#if protocolo.Analisis_quimico.Calcemia}}<p>Calcemia: {{protocolo.Analisis_quimico.Calcemia}}</p>{{/if}}
+                        {{#if protocolo.Analisis_quimico.Acido_Urico}}<p>Acido_Urico: {{protocolo.Analisis_quimico.Acido_Urico}}</p>{{/if}}
+                        {{#if protocolo.Analisis_quimico.Creatinina}}<p>Creatinina: {{protocolo.Analisis_quimico.Creatinina}}</p>{{/if}}
+                        {{#if protocolo.Analisis_quimico.indice_proteinuria_creatininuria}}<p>indice_proteinuria_creatininuria: {{protocolo.Analisis_quimico.indice_proteinuria_creatininuria}}</p>{{/if}}
+                        {{#if protocolo.Analisis_quimico.MDRD_4_IDMS}}<p>MDRD_4_IDMS: {{protocolo.Analisis_quimico.MDRD_4_IDMS}}</p>{{/if}}
+                        {{#if protocolo.Analisis_quimico.Proteinas_Totales}}<p>Proteinas_Totales: {{protocolo.Analisis_quimico.Proteinas_Totales}}</p>{{/if}}
+                        {{#if protocolo.Analisis_quimico.Albumina}}<p>Albumina: {{protocolo.Analisis_quimico.Albumina}}</p>{{/if}}
+                    </div>                
+                </div>
+            </div>
+            <div class="col-4 mt-2">
+                <div class="card">
+                    <div class="card-header">
+                        Enzimas
+                    </div>
+                    <div class="card-body">
+                        {{#if protocolo.Enzimas.GOT}}<p>GOT: {{protocolo.Enzimas.GOT}}</p>{{/if}}
+                        {{#if protocolo.Enzimas.GPT}}<p>GPT: {{protocolo.Enzimas.GPT}}</p>{{/if}}
+                        {{#if protocolo.Enzimas.Fosfatasa_Alc}}<p>Fosfatasa_Alc: {{protocolo.Enzimas.Fosfatasa_Alc}}</p>{{/if}}
+                        {{#if protocolo.Enzimas.GammaGT}}<p>GammaGT: {{protocolo.Enzimas.GammaGT}}</p>{{/if}}
+                        {{#if protocolo.Enzimas.Amilasa}}<p>Amilasa: {{protocolo.Enzimas.Amilasa}}</p>{{/if}}
+                    </div>                
+                </div>
+            </div>
+            </div>
+        {{/if}}
     </div>
+</div>
 </div>
