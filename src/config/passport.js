@@ -6,7 +6,7 @@ const User = require('../models/User');
 passport.use(new LocalStrategy({
     usernameField: 'name'
 }, async (name, password, done) => {
-    const user = await User.findOne({name: name})
+    user = await User.findOne({name: name})
     if (!user) {
         return done(null, false, { message: 'Usuario no encontrado'});
     } else {

@@ -14,7 +14,7 @@
                     <a class="nav-link" href="/about">Acerca de</a>
                 </li>
             </ul>
-            <a class="navbar-brand mx-auto" href="#">Resultados de Laboratorio</a>
+            <a class="navbar-brand mx-auto" href="#">Resultados de Laboratorio {{#if lastProtocolo}} al {{lastProtocolo}} {{/if}} </a>
             <ul class="navbar-nav ml-auto">
                 {{#if user}}
                     <a class="navbar-brand" href="#">Acceso Autorizado</a>
@@ -25,7 +25,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/paciente/seek">Buscar Paciente</a>
-                            <a class="dropdown-item" href="/notes/add">Add Note</a>
+                            {{!-- <a class="dropdown-item" href="/notes/add">Add Note</a> --}}
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/users/logout">Logout</a>
                         </div>
