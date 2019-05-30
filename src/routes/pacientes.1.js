@@ -8,10 +8,10 @@ router.get('/pacientes/seek', isAuthenticated, (req, res) => {
     res.render('pacientes/seek-paciente');
 });
 
-router.post('/pacientes/seek', isAuthenticated, async (req, res) => {
+router.get('/paciente/seek', isAuthenticated, async (req, res) => {
     const { opcion, dato } = req.body;
-    console.log(req.body);
-    let viewModel = { pacientes: {}, lastProtocolo: Date };
+    let viewModel = { dato: String, pacientes: {}, protocolo: {}, lastProtocolo: Date };
+    viewModel.dato = dato;
     const errors = [];
     let pacientes = {}
     if (!dato) {
@@ -39,8 +39,7 @@ router.post('/pacientes/seek', isAuthenticated, async (req, res) => {
         viewModel.pacientes = pacientes;
         const { Fecha } = await Protocolo.findOne().sort({Fecha: -1});
         viewModel.lastProtocolo = formatFecha(Fecha);
-        console.log(pacientes);
-        res.json(pacientes);
+        res.render('pacientes/seek-paciente', viewModel );
     }
 });
 

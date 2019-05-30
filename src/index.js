@@ -22,6 +22,7 @@ app.engine('.hbs', exphbs({
      helpers: require('./helpers/ffecha')
 }));
 app.set('view engine', '.hbs');
+app.set('json spaces', 2);
 
 // Midlewares
 app.use(express.urlencoded({ extended: false }));
@@ -34,6 +35,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
+app.use(express.json());
 
 
 
@@ -52,6 +54,7 @@ app.use(require('./routes/index'));
 app.use(require('./routes/notes'));
 app.use(require('./routes/users'));
 app.use(require('./routes/pacientes'));
+app.use(require('./routes/protocolo'));
 
 // Static Files
 app.use(express.static(path.join(__dirname, 'public')));

@@ -9,7 +9,7 @@ router.get('/users/signin', (req, res) => {
 });
 
 router.post('/users/signin', passport.authenticate('local', {
-    successRedirect: '/paciente/seek',
+    successRedirect: '/pacientes/seek',
     failureRedirect: '/users/signin',
     failureFlash: true
 }));
