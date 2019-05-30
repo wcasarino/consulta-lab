@@ -39,7 +39,7 @@ router.post('/pacientes/seek', isAuthenticated, async (req, res) => {
         viewModel.pacientes = pacientes;
         const { Fecha } = await Protocolo.findOne().sort({Fecha: -1});
         viewModel.lastProtocolo = formatFecha(Fecha);
-        console.log(pacientes);
+        //console.log(pacientes);
         res.json(pacientes);
     }
 });

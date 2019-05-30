@@ -1,6 +1,7 @@
 $(function () {
 
     const URI_PAC = '/pacientes/seek';
+    const URI_PRO = '/protocolo/seek';
 
     $('#pacienteForm').on('submit', (e) => {
         e.preventDefault();
@@ -18,9 +19,14 @@ $(function () {
                 let tbody = $('tbody');
                 tbody.html('');
                 pacientes.forEach(paciente => {
+                    let str = paciente.Fecha.toString()
+                    //console.log('STRING ',str);
+                    let ff = str.substr(8,2)+str.substr(4,4)+str.substr(0,4);
+                    //console.log(ff);
                   tbody.append(`
                       <tr>
-                        <td>${paciente.Fecha}</td>
+                        <td style="display:none" class="id">${paciente._id}</td>
+                        <td>${ff}</td>
                         <td>${paciente.Protocolo}</td>
                         <td>${paciente.Paciente.DNI}</td>
                         <td>${paciente.Paciente.Nombre}</td>
@@ -35,7 +41,27 @@ $(function () {
                 console.log(err);
             }
         })
-    })
+    });
 
+    $('table').on('click', '.update-button', function() {
+        let row = $(this).closest('tr');
+        let id = row.find('.id').text();
+        console.log(id);
+      });
+      $.ajax({
+        url: `${URI_PRO}/${id}`,
+        method: 'POST',
+        success: function(protocolo) {
+            let divProtocolo = $('#repepe');
+            //divProtocolo.html('');
+            divProtocolo.append(`
+                  <p> Este es mi parrafo
+                  </p>
+              `)
+        },
+        error: function (err) {
+            console.log(err);
+        }
+  });
 
 })

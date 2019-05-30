@@ -5,8 +5,12 @@ const { isAuthenticated } = require('../helpers/auth');
 const { formatFecha } =  require('../helpers/ffecha');
 
 router.post('/protocolo/seek/:id', isAuthenticated, async (req, res) => {
-    let viewModel = { DNI: String, pacientes: {}, protocolo: {}, lastProtocolo: Date };
+    console.log(req.body, req.params)
+    const { id } = req.params;
+    //const { name } = req.body;
+    //let viewModel = { DNI: String, pacientes: {}, protocolo: {}, lastProtocolo: Date };
     const protocolo = await Protocolo.findById(req.params.id); 
+    /*
     const pacientes = await Protocolo.find({"Paciente.DNI": protocolo.Paciente.DNI})
         .limit(15)
         .sort({ Fecha: -1 });
@@ -16,6 +20,8 @@ router.post('/protocolo/seek/:id', isAuthenticated, async (req, res) => {
     const { Fecha } = await Protocolo.findOne().sort({Fecha: -1});
     viewModel.lastProtocolo = formatFecha(Fecha);
     res.render('pacientes/seek-paciente', viewModel );
+    */
+   res.json(protocolo);
     //res.send('ok');
 });
 
