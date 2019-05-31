@@ -20,3 +20,6 @@ span { font-size: x-small; }
 p {
     line-height: 1;
 }
+td {
+    font-size: smaller;
+}

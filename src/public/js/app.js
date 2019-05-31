@@ -21,13 +21,12 @@ $(function () {
                 tbody.html('');
                 let divProtocolo = $('#protocolo1');
                 divProtocolo.html('');
-                console.log(pacientes);
+                if(typeof pacientes.length === 'undefined') {console.log('NO VIENEN DATOS');
+                }else {
                 if (pacientes) {
                     pacientes.forEach(paciente => {
                         let str = paciente.Fecha.toString()
-                        //console.log('STRING ',str);
                         let ff = str.substr(8,2)+str.substr(4,4)+str.substr(0,4);
-                        //console.log(ff);
                     tbody.append(`
                         <tr>
                             <td style="display:none" class="id">${paciente._id}</td>
@@ -42,6 +41,7 @@ $(function () {
                     `)
                     })
                 }
+            }
             },
             error: function (err) {
                 console.log(err);
@@ -62,7 +62,6 @@ $(function () {
             
           },
           success: function(protocolo) {
-                console.log(protocolo);
                 let divProtocolo = $('#protocolo1');
                 divProtocolo.html('');
                 let str1 = protocolo.Fecha.toString()
