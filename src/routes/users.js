@@ -30,7 +30,7 @@ router.post('/users/signup', async (req, res) => {
     if (password != confirm_password) {
         errors.push({text: 'Las contraseñas no coinciden'});
     }
-    if (password.length < 5) {
+    if (password.length < 4) {
         errors.push({text: 'La contraseña debe tener al menor 4 caracteres'});
     }
     if (errors.length > 0) {
