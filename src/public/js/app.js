@@ -113,7 +113,7 @@ $(function () {
                     </div>
                     <div class="card-body">`;
                 if (protocolo.Analisis_quimico.Glucemia) { texto = texto + `<p>Glucemia: <strong>${protocolo.Analisis_quimico.Glucemia}</strong> <span> g/l (VR: 0,7 - 1,1 g/l)</span></p>`};
-                if (protocolo.Analisis_quimico.Uremia) { texto = texto + `<p>Uremia: <strong>${protocolo.Analisis_quimico.Uremia}</strong> <span> g/l (VR: 0,7 - 1,1 g/l)</span></p>`};
+                if (protocolo.Analisis_quimico.Uremia) { texto = texto + `<p>Uremia: <strong>${protocolo.Analisis_quimico.Uremia}</strong> <span> g/l (VR: 0,1 - 0,5 g/l)</span></p>`};
                 if (protocolo.Analisis_quimico.Colesterol) { texto = texto + `<p>Colesterol: <strong>${protocolo.Analisis_quimico.Colesterol}</strong> <span> g/l (VR: < de 2 g/l)</span></p>`};
                 if (protocolo.Analisis_quimico.HDL_colesterol) { texto = texto + `<p>HDL colesterol: <strong>${protocolo.Analisis_quimico.HDL_colesterol}</strong> <span> g/l (VR: 0,4 - 0,6 g/l)</span></p>`};
                 if (protocolo.Analisis_quimico.LDL_colesterol) { texto = texto + `<p>LDL colesterol: <strong>${protocolo.Analisis_quimico.LDL_colesterol}</strong> <span> g/l (VR: < 1,29 g/l)</span></p>`};
@@ -145,9 +145,9 @@ $(function () {
                 if (protocolo.Orina.Pigm_Biliares) { texto = texto + `<p>Pigm. Biliares: <strong>${protocolo.Orina.Pigm_Biliares}</strong></p>`};
                 if (protocolo.Orina.Hemoglobina) { texto = texto + `<p>Hemoglobina: <strong>${protocolo.Orina.Hemoglobina}</strong></p>`};
 
-                if (protocolo.Examen_Microscopico_de_Sedimento.Sensibles) { texto = texto + `<h6 class="bg-dark text-white mx-auto">Examen Microscopico de Sedimento: </h6>`};
+                if (protocolo.Examen_Microscopico_de_Sedimento.Celulas) { texto = texto + `<h6 class="bg-dark text-white mx-auto">Examen Microscopico de Sedimento: </h6>`};
 
-                if (protocolo.Examen_Microscopico_de_Sedimento.Sensibles) { texto = texto + `<p>Sensibles: <strong>${protocolo.Examen_Microscopico_de_Sedimento.Sensibles}</strong><span> cantidad</span></p>`};
+                if (protocolo.Examen_Microscopico_de_Sedimento.Celulas) { texto = texto + `<p>Celulas: <strong>${protocolo.Examen_Microscopico_de_Sedimento.Celulas}</strong><span> cantidad</span></p>`};
                 if (protocolo.Examen_Microscopico_de_Sedimento.Leucocitos) { texto = texto + `<p>Leucocitos: <strong>${protocolo.Examen_Microscopico_de_Sedimento.Leucocitos}</strong><span> por campo</span></p>`};
                 if (protocolo.Examen_Microscopico_de_Sedimento.Hematies) { texto = texto + `<p>Hematies: <strong>${protocolo.Examen_Microscopico_de_Sedimento.Hematies}</strong><span> por campo</span></p>`};
                 if (protocolo.Examen_Microscopico_de_Sedimento.Cilindros) { texto = texto + `<p>Cilindros: <strong>${protocolo.Examen_Microscopico_de_Sedimento.Cilindros}</strong></p>`};
@@ -252,9 +252,9 @@ $(function () {
             Prueba Tolerancia oral a la glucosa
         </div>
         <div class="card-body">`;
-    if (protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_en_ayunas) { texto = texto + `<p>Glucemia en ayunas: <strong>${protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_en_ayunas}</strong></p>`};
-    if (protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_a_los_60_min_post_sobrecarga) { texto = texto + `<p>Glucemia 60 min post sobrecarga: <strong>${protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_a_los_60_min_post_sobrecarga}</strong></p>`};
-    if (protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_a_los_120_minutos_post_sobrecarga) { texto = texto + `<p>Glucemia 120 min post sobrecarga: <strong>${protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_a_los_120_minutos_post_sobrecarga}</strong></p>`};
+    if (protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_en_ayunas) { texto = texto + `<p>Glucemia en ayunas: <strong>${protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_en_ayunas}</strong><span> g/l</span></p>`};
+    if (protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_a_los_60_min_post_sobrecarga) { texto = texto + `<p>Glucemia 60 min post sobrecarga: <strong>${protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_a_los_60_min_post_sobrecarga}</strong><span> g/l</span></p>`};
+    if (protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_a_los_120_minutos_post_sobrecarga) { texto = texto + `<p>Glucemia 120 min post sobrecarga: <strong>${protocolo.PRUEBA_DE_TOLERANCIA_ORAL_A_LA_GLUCOSA.Glucemia_a_los_120_minutos_post_sobrecarga}</strong><span> g/l</span></p>`};
 
     texto = texto + `</div></div></div>`;                
 

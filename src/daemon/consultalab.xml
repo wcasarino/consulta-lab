@@ -1,0 +1,25 @@
+<service>
+	<id>consultalab.exe</id>
+	<name>Consulta LAB</name>
+	<description>Web Server para las consultas de estudios de Laboratorio de CAPS Dr. A. BARASSI</description>
+	<executable>C:\Program Files\nodejs\node.exe</executable>
+	<logmode>rotate</logmode>
+	<argument>--harmony</argument>
+	<argument>C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js</argument>
+	<argument>--file</argument>
+	<argument>D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js</argument>
+	<argument>--log</argument>
+	<argument>Consulta LAB wrapper</argument>
+	<argument>--grow</argument>
+	<argument>0.25</argument>
+	<argument>--wait</argument>
+	<argument>1</argument>
+	<argument>--maxrestarts</argument>
+	<argument>3</argument>
+	<argument>--abortonerror</argument>
+	<argument>n</argument>
+	<argument>--stopparentfirst</argument>
+	<argument>undefined</argument>
+	<stoptimeout>30sec</stoptimeout>
+	<workingdirectory>D:\Users\User\Desktop\Curso\Consulta-Lab</workingdirectory>
+</service>

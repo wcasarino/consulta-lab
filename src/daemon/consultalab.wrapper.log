@@ -1,0 +1,149 @@
+2019-06-03 09:23:54 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js --log "Consulta LAB wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-06-03 09:23:54 - Started 5256
+2019-06-03 09:26:18 - Stopping consultalab.exe
+2019-06-03 09:26:18 - ProcessKill 5256
+2019-06-03 09:26:18 - Shutdown exception
+Message:Se está cerrando el sistema. (Excepción de HRESULT: 0x8007045B)
+Stacktrace:   en System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   en System.Management.ManagementScope.InitializeGuts(Object o)
+   en System.Management.ManagementScope.Initialize()
+   en System.Management.ManagementObjectSearcher.Initialize()
+   en System.Management.ManagementObjectSearcher.Get()
+   en winsw.WrapperService.GetChildPids(Int32 pid)
+   en winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   en winsw.WrapperService.StopIt()
+   en winsw.WrapperService.OnShutdown()
+2019-06-03 09:27:17 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js --log "Consulta LAB wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-06-03 09:27:18 - Started 1848
+2019-06-03 09:32:29 - Stopping consultalab.exe
+2019-06-03 09:32:29 - ProcessKill 1848
+2019-06-03 09:32:29 - Found child process: 1960 Name: node.exe
+2019-06-03 09:32:29 - Stopping process 1960
+2019-06-03 09:32:29 - Send SIGINT 1960
+2019-06-03 09:32:29 - SIGINT to 1960 failed - Killing as fallback
+2019-06-03 09:32:29 - Stopping process 1848
+2019-06-03 09:32:29 - Send SIGINT 1848
+2019-06-03 09:32:29 - SIGINT to1848 successful
+2019-06-03 09:32:29 - Finished consultalab.exe
+2019-06-03 09:32:34 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js --log "Consulta LAB wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-06-03 09:32:34 - Started 4792
+2019-06-03 09:32:37 - Stopping consultalab.exe
+2019-06-03 09:32:37 - ProcessKill 4792
+2019-06-03 09:32:37 - Found child process: 4688 Name: node.exe
+2019-06-03 09:32:37 - Stopping process 4688
+2019-06-03 09:32:37 - Send SIGINT 4688
+2019-06-03 09:32:37 - SIGINT to 4688 failed - Killing as fallback
+2019-06-03 09:32:37 - Stopping process 4792
+2019-06-03 09:32:37 - Send SIGINT 4792
+2019-06-03 09:32:37 - SIGINT to4792 successful
+2019-06-03 09:32:37 - Finished consultalab.exe
+2019-06-03 09:32:56 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js --log "Consulta LAB wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-06-03 09:32:56 - Started 4548
+2019-06-03 10:10:12 - Stopping consultalab.exe
+2019-06-03 10:10:12 - ProcessKill 4548
+2019-06-03 10:10:12 - Found child process: 3664 Name: node.exe
+2019-06-03 10:10:12 - Stopping process 3664
+2019-06-03 10:10:12 - Send SIGINT 3664
+2019-06-03 10:10:12 - SIGINT to 3664 failed - Killing as fallback
+2019-06-03 10:10:12 - Stopping process 4548
+2019-06-03 10:10:12 - Send SIGINT 4548
+2019-06-03 10:10:12 - SIGINT to4548 successful
+2019-06-03 10:10:12 - Finished consultalab.exe
+2019-06-03 11:08:21 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js --log "Consulta LAB wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-06-03 11:08:21 - Started 6428
+2019-06-03 12:59:13 - Stopping consultalab.exe
+2019-06-03 12:59:13 - ProcessKill 6428
+2019-06-03 12:59:17 - Found child process: 1284 Name: node.exe
+2019-06-03 12:59:17 - Stopping process 1284
+2019-06-03 12:59:17 - Send SIGINT 1284
+2019-06-03 12:59:17 - SIGINT to 1284 failed - Killing as fallback
+2019-06-03 12:59:17 - Stopping process 6428
+2019-06-03 12:59:17 - Send SIGINT 6428
+2019-06-03 12:59:17 - SIGINT to6428 successful
+2019-06-03 12:59:17 - Finished consultalab.exe
+2019-06-03 17:14:07 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js --log "Consulta LAB wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-06-03 17:14:19 - Started 2028
+2019-06-03 18:36:04 - Stopping consultalab.exe
+2019-06-03 18:36:04 - ProcessKill 2028
+2019-06-03 18:36:05 - Found child process: 3608 Name: node.exe
+2019-06-03 18:36:05 - Stopping process 3608
+2019-06-03 18:36:05 - Send SIGINT 3608
+2019-06-03 18:36:05 - SIGINT to 3608 failed - Killing as fallback
+2019-06-03 18:36:05 - Stopping process 2028
+2019-06-03 18:36:05 - Send SIGINT 2028
+2019-06-03 18:36:05 - SIGINT to2028 successful
+2019-06-03 18:36:05 - Finished consultalab.exe
+2019-06-04 07:08:58 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js --log "Consulta LAB wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-06-04 07:08:59 - Started 1848
+2019-06-04 07:13:39 - Stopping consultalab.exe
+2019-06-04 07:13:39 - ProcessKill 1848
+2019-06-04 07:13:39 - Found child process: 1564 Name: node.exe
+2019-06-04 07:13:39 - Stopping process 1564
+2019-06-04 07:13:39 - Send SIGINT 1564
+2019-06-04 07:13:39 - SIGINT to 1564 failed - Killing as fallback
+2019-06-04 07:13:39 - Stopping process 1848
+2019-06-04 07:13:39 - Send SIGINT 1848
+2019-06-04 07:13:39 - SIGINT to1848 successful
+2019-06-04 07:13:40 - Finished consultalab.exe
+2019-06-04 07:13:43 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js --log "Consulta LAB wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-06-04 07:13:43 - Started 6052
+2019-06-04 12:59:30 - Stopping consultalab.exe
+2019-06-04 12:59:30 - ProcessKill 6052
+2019-06-04 12:59:30 - Found child process: 556 Name: node.exe
+2019-06-04 12:59:30 - Stopping process 556
+2019-06-04 12:59:30 - Send SIGINT 556
+2019-06-04 12:59:30 - SIGINT to 556 failed - Killing as fallback
+2019-06-04 12:59:30 - Stopping process 6052
+2019-06-04 12:59:30 - Send SIGINT 6052
+2019-06-04 12:59:31 - SIGINT to6052 successful
+2019-06-04 12:59:31 - Finished consultalab.exe
+2019-06-04 14:07:43 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js --log "Consulta LAB wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-06-04 14:07:44 - Started 1860
+2019-06-04 19:00:04 - Stopping consultalab.exe
+2019-06-04 19:00:04 - ProcessKill 1860
+2019-06-04 19:00:04 - Found child process: 1824 Name: node.exe
+2019-06-04 19:00:04 - Stopping process 1824
+2019-06-04 19:00:04 - Send SIGINT 1824
+2019-06-04 19:00:04 - SIGINT to 1824 failed - Killing as fallback
+2019-06-04 19:00:04 - Stopping process 1860
+2019-06-04 19:00:04 - Send SIGINT 1860
+2019-06-04 19:00:04 - SIGINT to1860 successful
+2019-06-04 19:00:04 - Finished consultalab.exe
+2019-06-05 07:11:54 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js --log "Consulta LAB wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-06-05 07:11:55 - Started 1804
+2019-06-05 07:38:14 - Stopping consultalab.exe
+2019-06-05 07:38:14 - ProcessKill 1804
+2019-06-05 07:38:14 - Found child process: 188 Name: node.exe
+2019-06-05 07:38:14 - Stopping process 188
+2019-06-05 07:38:14 - Send SIGINT 188
+2019-06-05 07:38:14 - SIGINT to 188 failed - Killing as fallback
+2019-06-05 07:38:14 - Stopping process 1804
+2019-06-05 07:38:14 - Send SIGINT 1804
+2019-06-05 07:38:14 - SIGINT to1804 successful
+2019-06-05 07:38:14 - Finished consultalab.exe
+2019-06-05 07:38:17 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js --log "Consulta LAB wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-06-05 07:38:17 - Started 5104
+2019-06-06 08:42:45 - Stopping consultalab.exe
+2019-06-06 08:42:45 - ProcessKill 5104
+2019-06-06 08:42:47 - Found child process: 5192 Name: node.exe
+2019-06-06 08:42:47 - Stopping process 5192
+2019-06-06 08:42:47 - Send SIGINT 5192
+2019-06-06 08:42:47 - SIGINT to 5192 failed - Killing as fallback
+2019-06-06 08:42:47 - Stopping process 5104
+2019-06-06 08:42:47 - Send SIGINT 5104
+2019-06-06 08:42:47 - SIGINT to5104 successful
+2019-06-06 08:42:47 - Finished consultalab.exe
+2019-06-06 08:42:50 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js --log "Consulta LAB wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-06-06 08:42:50 - Started 8136
+2019-06-06 09:29:54 - Stopping consultalab.exe
+2019-06-06 09:29:54 - ProcessKill 8136
+2019-06-06 09:29:54 - Found child process: 428 Name: node.exe
+2019-06-06 09:29:54 - Stopping process 428
+2019-06-06 09:29:54 - Send SIGINT 428
+2019-06-06 09:29:54 - SIGINT to 428 failed - Killing as fallback
+2019-06-06 09:29:54 - Stopping process 8136
+2019-06-06 09:29:54 - Send SIGINT 8136
+2019-06-06 09:29:54 - SIGINT to8136 successful
+2019-06-06 09:29:54 - Finished consultalab.exe
+2019-06-06 09:29:57 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\User\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Users\User\Desktop\Curso\Consulta-Lab\src\index.js --log "Consulta LAB wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2019-06-06 09:29:57 - Started 6648
